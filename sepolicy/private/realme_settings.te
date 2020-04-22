@@ -1,0 +1,46 @@
+type realme_settings, domain;
+
+app_domain(realme_settings)
+
+# Access standard system services
+allow realme_settings app_api_service:service_manager find;
+allow realme_settings audioserver_service:service_manager find;
+allow realme_settings cameraserver_service:service_manager find;
+allow realme_settings drmserver_service:service_manager find;
+allow realme_settings mediaextractor_service:service_manager find;
+allow realme_settings mediaserver_service:service_manager find;
+allow realme_settings mediametrics_service:service_manager find;
+allow realme_settings nfc_service:service_manager find;
+allow realme_settings surfaceflinger_service:service_manager find;
+allow realme_settings hidl_token_hwservice:hwservice_manager find;
+
+# Allow settings read and write /data/data subdirectory
+allow realme_settings system_app_data_file:dir create_dir_perms;
+allow realme_settings system_app_data_file:{ file lnk_file } create_file_perms;
+
+# Allow realme_settings to find hal_displayfeature_realme_hwservice
+allow realme_settings hal_displayfeature_realme_hwservice:hwservice_manager find;
+
+# Allow realme_settings to find hal_motor_hwservice:hwservice_manager
+allow realme_settings hal_motor_hwservice:hwservice_manager find;
+get_prop(realme_settings, persist_camera_prop)
+
+# Allow binder communication with hal_displayfeature_realme_default
+binder_call(realme_settings, hal_displayfeature_realme_default)
+
+# Allow binder communication with hal_motor_default
+binder_call(realme_settings, hal_motor_default)
+
+# Allow binder communication with gpuservice
+binder_call(realme_settings, gpuservice)
+
+# Allow realme_settings to read and write to cgroup
+allow realme_settings cgroup:file rw_file_perms;
+
+# Allow realme_settings to read and write to sysfs_graphics
+allow realme_settings sysfs_graphics:dir search;
+allow realme_settings sysfs_graphics:file rw_file_perms;
+
+# Allow realme_settings to read and write to sysfs_leds
+allow realme_settings sysfs_leds:dir search;
+allow realme_settings sysfs_leds:file rw_file_perms;
