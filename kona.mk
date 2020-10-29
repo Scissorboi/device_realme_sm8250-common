@@ -159,9 +159,9 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-qti.xml
 
-# WiFi
+# Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.tetheroffload.config@1.0
+    android.hardware.thermal@2.0
 
 # WiFi Display
 PRODUCT_PACKAGES += \
@@ -176,3 +176,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 BOARD_BUILD_PRODUCT_IMAGE := true
+
+# WiFi Tethering
+PRODUCT_PACKAGES += \
+    android.hardware.tetheroffload.config@1.0
