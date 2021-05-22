@@ -60,6 +60,9 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.recovery.qcom.rc
     
+# Device-specific settings
+PRODUCT_PACKAGES += \
+    RealmeParts
     
 # Display
 PRODUCT_PACKAGES += \
