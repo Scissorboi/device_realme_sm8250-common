@@ -16,7 +16,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter umi cmi,$(TARGET_DEVICE)),)
+ifneq ($(filter RMX2076 RMX2075 RMX2071,$(TARGET_DEVICE)),)
   subdir_makefiles=$(call first-makefiles-under,$(LOCAL_PATH))
   $(foreach mk,$(subdir_makefiles),$(info including $(mk) ...)$(eval include $(mk)))
 endif

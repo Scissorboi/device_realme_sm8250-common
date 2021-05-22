@@ -51,9 +51,7 @@ on early-init
     mount debugfs debugfs /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
 
-  # bind hostapd to fix hotspot
-
-//bind hostpd to aosp
+  # bind hostapd to aosp to fix hotspot
 mount none /system/bin/hw/hostapd /vendor/bin/hw/hostapd bind
 
   # create symlink for vendor mount points
