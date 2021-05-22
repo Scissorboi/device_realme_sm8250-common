@@ -62,7 +62,8 @@ PRODUCT_PACKAGES += \
     
 # Device-specific settings
 PRODUCT_PACKAGES += \
-    RealmeParts
+    RealmeParts \
+    devicesettings
     
 # Display
 PRODUCT_PACKAGES += \
