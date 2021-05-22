@@ -388,10 +388,6 @@
         <item>mobile_emergency,15,0,2,-1,true</item>
     </string-array>
 
-    <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
-         on the headphone/microphone jack. When false use the older uevent framework. -->
-     <bool name="config_useDevInputEventForAudioJack">true</bool>
-
     <!-- This string array should be overridden by the device to present a list of radio
          attributes.  This is used by the connectivity manager to decide which networks can coexist
          based on the hardware -->
