@@ -23,7 +23,6 @@ allow realme_settings hal_displayfeature_realme_hwservice:hwservice_manager find
 
 # Allow realme_settings to find hal_motor_hwservice:hwservice_manager
 allow realme_settings hal_motor_hwservice:hwservice_manager find;
-get_prop(realme_settings, persist_camera_prop)
 
 #Allow realme_settings to find hal_touchfeature_hwservice:hwservice_manager
 #allow realme_settings hal_touchfeature_realme_hwservice:hwservice_manager find;

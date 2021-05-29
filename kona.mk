@@ -25,15 +25,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # Get non-open-source specific aspects
 #$(call inherit-product, vendor/realme/sm8250-common/sm8250-common-vendor.mk)
 
-# VNDK
-PRODUCT_TARGET_VNDK_VERSION := 29
+PRODUCT_SHIPPING_API_LEVEL := 29
+
 PRODUCT_TARGET_VNDK_VERSION := 29
 PRODUCT_EXTRA_VNDK_VERSIONS := 29
 
 # FIXME: master: compat for libprotobuf
 # See https://android-review.googlesource.com/c/platform/prebuilts/vndk/v28/+/1109518
 PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full-vendorcompat 
+    libprotobuf-cpp-full-vendorcompat
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -43,8 +43,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     libaacwrapper     \
-    libfmq \
-    tinymix
+    libfmq
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_configuration.xml \
@@ -86,7 +85,7 @@ PRODUCT_PACKAGES += \
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-hotword.xml
+    $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
 
 # HOSTPAD
 PRODUCT_COPY_FILES += \
