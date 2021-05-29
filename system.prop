@@ -4,6 +4,12 @@ ro.dolby.manufacturer=OPPO
 ro.dolby.brand=OPPO
 ro.build.keystore.path=/sdcard/.lii/
 
+# Display
+ro.sf.lcd_density=440
+
+# DPM
+persist.vendor.dpm.feature=1
+
 #
 # from device/qcom/qssi/system.prop
 #
@@ -42,7 +48,6 @@ media.stagefright.enable-qcp=true
 media.stagefright.enable-fma2dp=true
 media.stagefright.enable-scan=true
 media.stagefright.thumbnail.prefer_hw_codecs=true
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 mmp.enable.3g2=true
 ro.vendor.qti.va_aosp.support=1
 media.aac_51_output_enabled=true
@@ -230,5 +235,13 @@ persist.ims.disableIMSLogs=0
 persist.camera.light_ae.enable = 1
 #endif
 # end of device/qcom/qssi/system.prop
+
+keyguard.no_require_sim=true
+ro.com.android.dataroaming=true
+debug.sf.disable_backpressure=1
+media.stagefright.thumbnail.prefer_hw_codecs=true
+vendor.mm.enable.qcom_parser=131071999
+persist.device_config.runtime_native.usap_pool_enabled=true
+ro.control_privapp_permissions=log
 
 #
