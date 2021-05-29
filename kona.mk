@@ -20,8 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Include GSI keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/realme/sm8250-common/sm8250-common-vendor.mk)
@@ -29,6 +28,8 @@ $(call inherit-product, vendor/realme/sm8250-common/sm8250-common-vendor.mk)
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29
+PRODUCT_TARGET_VNDK_VERSION := 29
+PRODUCT_EXTRA_VNDK_VERSIONS := 29
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -39,9 +40,8 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     libaacwrapper     \
     libfmq \
-    tinymix 
-    
-    
+    tinymix
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_configuration.xml \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio/audio_policy_configuration.xml \
@@ -50,21 +50,21 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     BluetoothQti
-     
+
 # Camera
 PRODUCT_PACKAGES += \
     Snap
-    
+
 # Common init scripts
 PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.recovery.qcom.rc
-    
+
 # Device-specific settings
 PRODUCT_PACKAGES += \
     RealmeParts \
     devicesettings
-    
+
 # Display
 PRODUCT_PACKAGES += \
     libdisplayconfig \
@@ -73,25 +73,26 @@ PRODUCT_PACKAGES += \
     libvulkan \
     vendor.display.config@1.0
 
-    
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
-    
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
-    android.hidl.manager@1.0 
-    
+    android.hidl.manager@1.0 \
+    libhidltransport \
+    libhwbinder
+
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-hotword.xml
 
-#HOSTPAD
+# HOSTPAD
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hostapd:system/bin/hw/hostapd
 
-#Light
+# Light
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl.kona
 
@@ -102,7 +103,7 @@ PRODUCT_COPY_FILES += \
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
-    
+
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
@@ -110,23 +111,21 @@ PRODUCT_PACKAGES += \
     NfcNci \
     SecureElement \
     Tag
-    
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
-    
+
 # Overlays - override vendor ones
 PRODUCT_PACKAGES += \
     FrameworksResCommon \
-    FrameworksResTarget 
+    FrameworksResTarget
 
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.telephony.ims.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/handheld_core_hardware.xml \
-    
-
 
 # PowerShare
 PRODUCT_PACKAGES += \
@@ -151,13 +150,14 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml \
     telephony-ext
 
+PRODUCT_PACKAGES += \
+	android.hardware.radio@1.4
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-qti.xml
-    
 
 # WiFi Display
 PRODUCT_PACKAGES += \
