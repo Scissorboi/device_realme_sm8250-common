@@ -25,7 +25,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # Get non-open-source specific aspects
 #$(call inherit-product, vendor/realme/sm8250-common/sm8250-common-vendor.mk)
 
-
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29
 PRODUCT_TARGET_VNDK_VERSION := 29
@@ -46,10 +45,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_configuration.xml \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio/audio_policy_configuration.xml \
     $(LOCAL_PATH)/audio/audio_policy_engine_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_engine_configuration.xml 
-
-# Bluetooth
-PRODUCT_PACKAGES += \
-    BluetoothQti
 
 # Camera
 PRODUCT_PACKAGES += \
