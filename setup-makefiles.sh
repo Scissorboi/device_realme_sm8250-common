@@ -29,7 +29,7 @@ source "${HELPER}"
 setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${LINEAGE_ROOT}" true
 
 # Copyright headers and guards
-write_headers "RMX2076 RMX2075 RMX2071"
+write_headers "RMX2076 RMX2076PU RMX2071CN RMX2072CN RMX2075 RMX2071"
 
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
