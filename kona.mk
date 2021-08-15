@@ -157,7 +157,36 @@ PRODUCT_BOOT_JARS += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-qti.xml
-    
+
+# WiFi
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
+    $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg_cmcc.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg_cmcc.ini \
+    $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg_ua.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg_ua.ini \
+    $(LOCAL_PATH)/configs/wifi/aoa_cldb_falcon.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/aoa_cldb_falcon.bin \
+    $(LOCAL_PATH)/configs/wifi/aoa_cldb_swl14.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/aoa_cldb_swl14.bin \
+    $(LOCAL_PATH)/configs/wifi/bdwlan_19065.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bdwlan_19065.elf \
+    $(LOCAL_PATH)/configs/wifi/bdwlan_19066.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bdwlan_19066.elf \
+    $(LOCAL_PATH)/configs/wifi/bdwlan_19161.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bdwlan_19161.elf \
+    $(LOCAL_PATH)/configs/wifi/bdwlan_19361.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bdwlan_19361.elf \
+    $(LOCAL_PATH)/configs/wifi/bdwlan_19362.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bdwlan_19362.elf \
+    $(LOCAL_PATH)/configs/wifi/bdwlan_19705.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bdwlan_19705.elf \
+    $(LOCAL_PATH)/configs/wifi/bdwlan_19795.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bdwlan_19795.elf \
+    $(LOCAL_PATH)/configs/wifi/bdwlan_20607.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bdwlan_20607.elf \
+    $(LOCAL_PATH)/configs/wifi/bin_version:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bin_version \
+    $(LOCAL_PATH)/configs/wifi/bin_version_realme:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bin_version_realme \
+    $(LOCAL_PATH)/configs/wifi/fstman.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/fstman.ini \
+    $(LOCAL_PATH)/configs/wifi/icm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/icm.conf \
+    $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/wifi/regdb.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/regdb.bin \
+    $(LOCAL_PATH)/configs/wifi/regdb_version:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/regdb_version \
+    $(LOCAL_PATH)/configs/wifi/sar-vendor-cmd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/sar-vendor-cmd.xml \
+    $(LOCAL_PATH)/configs/wifi/wifisar.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wifisar.xml \
+    $(LOCAL_PATH)/configs/wifi/wigig_p2p_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wigig_p2p_supplicant.conf \
+    $(LOCAL_PATH)/configs/wifi/wigig_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wigig_supplicant.conf \
+    $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
+    $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/wifi/xwificonfig_exands.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/xwificonfig_exands.bin \
 
 # WiFi Display
 PRODUCT_PACKAGES += \
