@@ -160,10 +160,6 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
 
-# Device-specific settings
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 # Component overrides
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
@@ -201,24 +197,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
-# Fingerprint
-ifeq ($(TARGET_HAS_FOD),true)
-PRODUCT_PACKAGES += \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_kona
-
-PRODUCT_PACKAGES += \
-    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
-
-PRODUCT_COPY_FILES += \
-    vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
-endif
-
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_kona
-
-PRODUCT_PACKAGES += \
-    vendor.xiaomi.hardware.fingerprintextension@1.0.vendor
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
@@ -234,13 +212,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
 
-# IFAA manager
-PRODUCT_PACKAGES += \
-    org.ifaa.android.manager
-
-PRODUCT_BOOT_JARS += \
-    org.ifaa.android.manager
-
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
@@ -250,11 +221,11 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.xiaomi_kona
+    android.hardware.lights-service.realme_kona
 
 # LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.livedisplay@2.0-service-sdm
 
 # Media
 PRODUCT_PACKAGES += \
@@ -329,7 +300,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.xiaomi-libperfmgr
+    android.hardware.power-service.realme-libperfmgr
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
@@ -358,23 +329,45 @@ PRODUCT_PACKAGES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
+    init.at.class_main.sh \
+    init.at.post_boot.sh \
     init.class_main.sh \
+    init.crda.sh \
     init.mdm.sh \
-    init.mi.btmac.sh \
+    init.qcom.class_core.sh \
+    init.qcom.coex.sh \
     init.qcom.early_boot.sh \
+    init.qcom.efs.sync.sh \
     init.qcom.post_boot.sh \
+    init.qcom.sdio.sh \
     init.qcom.sh \
-    init.qti.dcvs.sh
-
-PRODUCT_PACKAGES += \
-    init.nfc.rc \
+    init.qti.chg_policy.sh \
+    init.qti.dcvs.sh \
+    init.qti.ims.sh \
+    init.qti.media.sh \
+    init.qti.qcv.sh \
+    install-recovery.sh \
+    qca6234-service.sh \
+    init.at.qcom.rc \
+    init.at.target.rc \
+    init.oppo.sensor.rc \
+    init.oppo.vendor.touchpress.rc \
+    init.qcom.factory.rc \
     init.qcom.power.rc \
     init.qcom.rc \
+    init.recovery.hardware.rc \
     init.recovery.qcom.rc \
     init.target.rc \
+    init.target.wigig.rc \
+    init.wlan.qcom.rc \
+    init.wlan.target.rc \
+    fstab-wlan.qcom \
+    fstab.at.qcom \
     fstab.qcom \
-    fstab.qcom_ramdisk \
     ueventd.qcom.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -385,7 +378,7 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/xiaomi
+    hardware/realme
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -425,7 +418,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.xiaomi_kona
+    vendor.qti.hardware.vibrator.service.realme_kona
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
@@ -453,8 +446,8 @@ PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+#PRODUCT_BOOT_JARS += \
+#    WfdCommon
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/sm8250-common/sm8250-common-vendor.mk)
+#$(call inherit-product, vendor/realme/sm8250-common/sm8250-common-vendor.mk)

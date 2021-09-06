@@ -1,0 +1,4 @@
+service vendor.qti.vibrator.realme_kona /vendor/bin/hw/vendor.qti.hardware.vibrator.service.realme_kona
+    class hal
+    user system
+    group system input

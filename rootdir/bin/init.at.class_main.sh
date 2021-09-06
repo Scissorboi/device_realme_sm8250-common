@@ -89,7 +89,7 @@ case "$baseband" in
         stop ril-daemon
         stop vendor.ril-daemon
 
-        start vendor.qcrild
+        #start vendor.qcrild
     else
         start ril-daemon
         start vendor.ril-daemon
@@ -112,13 +112,14 @@ case "$baseband" in
 
     if [ "$multisim" = "dsds" ] || [ "$multisim" = "dsda" ]; then
         if [ "$qcrild_status" = "true" ]; then
-          start vendor.qcrild2
+          #start vendor.qcrild2
+          echo "stop vendor.qcrild2"
         else
           start vendor.ril-daemon2
         fi
     elif [ "$multisim" = "tsts" ]; then
         if [ "$qcrild_status" = "true" ]; then
-          start vendor.qcrild2
+          #start vendor.qcrild2
           start vendor.qcrild3
         else
           start vendor.ril-daemon2

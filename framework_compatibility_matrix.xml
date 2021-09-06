@@ -408,7 +408,7 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.hardware.displayfeature</name>
+        <name>vendor.realme.hardware.displayfeature</name>
         <version>1.0</version>
         <interface>
             <name>IDisplayFeature</name>
@@ -416,7 +416,7 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.hardware.fingerprintextension</name>
+        <name>vendor.realme.hardware.fingerprintextension</name>
         <version>1.0</version>
         <interface>
             <name>IXiaomiFingerprint</name>
@@ -424,7 +424,7 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.hardware.mlipay</name>
+        <name>vendor.realme.hardware.mlipay</name>
         <version>1.0-1</version>
         <interface>
             <name>IMlipayService</name>
@@ -432,7 +432,7 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.hardware.motor</name>
+        <name>vendor.realme.hardware.motor</name>
         <version>1.0</version>
         <interface>
             <name>IMotor</name>
