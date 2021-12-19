@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=realme_sdm710
+DEVICE=realme_kona
 VENDOR=realme
 
 # Load extract_utils and do some sanity checks

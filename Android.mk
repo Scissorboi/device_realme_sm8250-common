@@ -5,7 +5,7 @@
 #
 
 LOCAL_PATH := $(call my-dir)
-ifeq ($(TARGET_DEVICE),realme_sdm710)
+ifeq ($(TARGET_DEVICE),realme_kona)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 include $(CLEAR_VARS)
 

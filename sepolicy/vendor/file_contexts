@@ -4,4 +4,4 @@
 /persist(/.*)?                                u:object_r:persist_file:s0
 
 # Lights
-/vendor/bin/hw/android\.hardware\.lights-service\.realme_sdm710          u:object_r:hal_light_default_exec:s0
+/vendor/bin/hw/android\.hardware\.lights-service\.realme_kona          u:object_r:hal_light_default_exec:s0

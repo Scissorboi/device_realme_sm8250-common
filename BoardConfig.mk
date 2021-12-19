@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/realme/realme_sdm710
+DEVICE_PATH := device/realme/realme_kona
 BOARD_VENDOR := realme
 BUILD_BROKEN_DUP_RULES := true
 
@@ -25,8 +25,8 @@ TARGET_USES_64_BIT_BINDER := true
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_BOOTLOADER_BOARD_NAME := sdm710
-TARGET_BOARD_PLATFORM := sdm710
+TARGET_BOOTLOADER_BOARD_NAME := kona
+TARGET_BOARD_PLATFORM := kona
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
@@ -43,8 +43,8 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --header_version 1
 
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_SOURCE := kernel/realme/sdm710
-TARGET_KERNEL_CONFIG := realme_sdm710_defconfig
+TARGET_KERNEL_SOURCE := kernel/realme/kona
+TARGET_KERNEL_CONFIG := realme_kona_defconfig
 
 # Assertion
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
@@ -79,7 +79,7 @@ BOARD_HAS_QCA_FM_SOC := "cherokee"
 BOARD_HAVE_QCOM_FM := true
 
 # FOD
-TARGET_SURFACEFLINGER_FOD_LIB := //$(DEVICE_PATH):libfod_extension.realme_sdm710
+TARGET_SURFACEFLINGER_FOD_LIB := //$(DEVICE_PATH):libfod_extension.realme_kona
 
 # Graphics
 TARGET_USES_GRALLOC1 := true
@@ -94,8 +94,8 @@ ODM_MANIFEST_SKUS += RMX1921EU
 ODM_MANIFEST_RMX1921EU_FILES := $(DEVICE_PATH)/odm_manifests/manifest_RMX1921EU.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_realme_sdm710
-TARGET_RECOVERY_DEVICE_MODULES := libinit_realme_sdm710
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_realme_kona
+TARGET_RECOVERY_DEVICE_MODULES := libinit_realme_kona
 
 # LMKD
 TARGET_LMKD_STATS_LOG := true
@@ -151,7 +151,7 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_realme_sdm710
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_realme_kona
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # Root

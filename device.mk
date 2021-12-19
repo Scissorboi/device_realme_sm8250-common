@@ -12,7 +12,7 @@
 $(call inherit-product, build/make/target/product/product_launched_with_p.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/realme/realme_sdm710/realme_sdm710-vendor.mk)
+$(call inherit-product-if-exists, vendor/realme/realme_kona/realme_kona-vendor.mk)
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
@@ -100,7 +100,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.bluetooth.default \
-    audio.primary.sdm710 \
+    audio.primary.kona \
     audio.r_submix.default \
     audio.usb.default \
 
@@ -126,7 +126,7 @@ PRODUCT_PACKAGES += \
     libvisualizer \
     libvolumelistener
 
-AUDIO_CONFIG_SDM710 := hardware/qcom-caf/sm8350/audio/configs/sdm710
+AUDIO_CONFIG_SDM710 := hardware/qcom-caf/sm8350/audio/configs/kona
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_effects.xml \
@@ -214,9 +214,9 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    gralloc.sdm710 \
-    memtrack.sdm710 \
-    hwcomposer.sdm710 \
+    gralloc.kona \
+    memtrack.kona \
+    hwcomposer.kona \
     libdisplayconfig.qti \
     libqdMetaData \
     libtinyxml \
@@ -263,8 +263,8 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     vendor.oplus.hardware.biometrics.fingerprint@2.1 \
-    android.hardware.biometrics.fingerprint@2.1-service.realme_sdm710 \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.realme_sdm710
+    android.hardware.biometrics.fingerprint@2.1-service.realme_kona \
+    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.realme_kona
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -289,7 +289,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.realme_sdm710
+    android.hardware.lights-service.realme_kona
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
@@ -410,7 +410,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
-    init.realme_sdm710.rc \
+    init.realme_kona.rc \
     ueventd.qcom.rc
 
 PRODUCT_COPY_FILES += \
@@ -418,7 +418,7 @@ PRODUCT_COPY_FILES += \
 
 # Recovery
 PRODUCT_PACKAGES += \
-    librecovery_updater_realme_sdm710
+    librecovery_updater_realme_kona
 
 # RenderScript
 PRODUCT_PACKAGES += \
@@ -456,7 +456,7 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.realme_sdm710
+    vendor.lineage.touch@1.0-service.realme_kona
 
 # Thermal
 PRODUCT_PACKAGES += \

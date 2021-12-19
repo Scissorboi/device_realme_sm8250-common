@@ -3043,9 +3043,9 @@ case "$target" in
 esac
 
 case "$target" in
-    "sdm710")
+    "kona")
 
-        #Apply settings for sdm710
+        #Apply settings for kona
         # Set the default IRQ affinity to the silver cluster. When a
         # CPU is isolated/hotplugged, the IRQ affinity is adjusted
         # to one of the CPU from the default IRQ affinity mask.
@@ -5739,7 +5739,7 @@ case "$target" in
         start mpdecision
         echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
     ;;
-    "msm8909" | "msm8916" | "msm8937" | "msm8952" | "msm8953" | "msm8994" | "msm8992" | "msm8996" | "msm8998" | "sdm660" | "apq8098_latv" | "sdm845" | "sdm710" | "msmnile" | "msmsteppe" | "sm6150" | "kona" | "lito" | "trinket" | "atoll" | "bengal" | "sdmshrike")
+    "msm8909" | "msm8916" | "msm8937" | "msm8952" | "msm8953" | "msm8994" | "msm8992" | "msm8996" | "msm8998" | "sdm660" | "apq8098_latv" | "sdm845" | "kona" | "msmnile" | "msmsteppe" | "sm6150" | "kona" | "lito" | "trinket" | "atoll" | "bengal" | "sdmshrike")
         setprop vendor.post_boot.parsed 1
     ;;
     "apq8084")

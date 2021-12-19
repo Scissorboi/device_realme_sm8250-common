@@ -84,8 +84,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.realme_sdm710.rc",
-    src: "etc/init.realme_sdm710.rc",
+    name: "init.realme_kona.rc",
+    src: "etc/init.realme_kona.rc",
     sub_dir: "init/hw",
     vendor: true,
 }

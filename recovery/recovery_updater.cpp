@@ -188,6 +188,6 @@ Value * VerifyTrustZoneFn(const char *name, State *state,
     return StringValue(strdup(ret ? "1" : "0"));
 }
 
-void Register_librecovery_updater_realme_sdm710() {
-    RegisterFunction("realme_sdm710.verify_trustzone", VerifyTrustZoneFn);
+void Register_librecovery_updater_realme_kona() {
+    RegisterFunction("realme_kona.verify_trustzone", VerifyTrustZoneFn);
 }

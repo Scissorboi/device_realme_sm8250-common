@@ -298,7 +298,7 @@ case "$target" in
                 ;;
         esac
         ;;
-     "sdm710")
+     "kona")
         case "$soc_hwplatform" in
             *)
                 if [ $fb_width -le 1600 ]; then
@@ -382,7 +382,7 @@ case "$target" in
                 ;;
         esac
         ;;
-    "sdm710" | "msmpeafowl")
+    "kona" | "msmpeafowl")
         case "$soc_hwplatform" in
             *)
                 if [ $fb_width -le 1600 ]; then

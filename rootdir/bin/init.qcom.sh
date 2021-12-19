@@ -288,7 +288,7 @@ case "$target" in
                   ;;
         esac
         ;;
-    "msm8994" | "msm8992" | "msm8998" | "apq8098_latv" | "sdm845" | "sdm710" | "qcs605" | "sm6150" | "trinket" | "bengal")
+    "msm8994" | "msm8992" | "msm8998" | "apq8098_latv" | "sdm845" | "kona" | "qcs605" | "sm6150" | "trinket" | "bengal")
         start_msm_irqbalance
         ;;
     "msm8996")
@@ -393,7 +393,7 @@ case "$target" in
                   ;;
        esac
         ;;
-    "sdm710")
+    "kona")
         if [ -f /sys/devices/soc0/soc_id ]; then
             soc_id=`cat /sys/devices/soc0/soc_id`
         else
