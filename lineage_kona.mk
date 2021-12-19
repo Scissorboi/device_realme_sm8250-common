@@ -18,7 +18,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_BRAND := Realme
 PRODUCT_DEVICE := realme_kona
 PRODUCT_MANUFACTURER := Realme
-PRODUCT_NAME := lineage_realme_kona
+PRODUCT_NAME := lineage_kona
 PRODUCT_MODEL := realme_kona
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo

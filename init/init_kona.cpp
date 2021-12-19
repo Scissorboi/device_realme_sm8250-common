@@ -35,14 +35,14 @@ void vendor_load_properties() {
 	getline(infile, prjName);
 	
 	if (prjName == "19651") {
-            model = "RMX1921";
-               if (oppo_sku == "nfc_ese" || oppo_sku == "RMX1921EU") {	
-                   device = "RMX1921EU";
+            model = "RMX2076";
+               if (oppo_sku == "nfc_ese" || oppo_sku == "RMX2076EU") {	
+                   device = "RMX2076EU";
                    property_override("ro.power_profile.override", "power_profile_XT");
                    property_override("ro.hardware.nfc_nci", "nqx.default");
                    property_override("ro.nfc.port", "I2C");
                } else {
-                    device = "RMX1921";
+                    device = "RMX2076";
                             }
                        }          
      

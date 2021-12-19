@@ -5,8 +5,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_realme_kona.mk
+    $(LOCAL_DIR)/lineage_kona.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_realme_kona-userdebug \
-    lineage_realme_kona-eng
+    lineage_kona-userdebug \
+    lineage_kona-eng

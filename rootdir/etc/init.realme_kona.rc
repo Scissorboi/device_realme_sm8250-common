@@ -89,8 +89,8 @@ service vendor.charger /system/bin/chargeonlymode
     capabilities SYS_BOOT
     seclabel u:r:charger:s0
     
-# Enable NFC service for RMX1921EU
-on boot && property:ro.boot.product.hardware.sku=RMX1921EU
+# Enable NFC service for RMX2076PU
+on boot && property:ro.boot.product.hardware.sku=RMX2076PU
     start vendor.nfc_hal_service
     
 # Enable motor service for RMX1901

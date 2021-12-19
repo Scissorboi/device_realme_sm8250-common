@@ -15,9 +15,9 @@
 //
 
 cc_library_static {
-    name: "libinit_realme_kona",
+    name: "libinit_kona",
     recovery_available: true,
-    srcs: ["init_realme_kona.cpp"],
+    srcs: ["init_kona.cpp"],
     whole_static_libs: ["libbase"],
     include_dirs: [
         "system/core/base/include",
