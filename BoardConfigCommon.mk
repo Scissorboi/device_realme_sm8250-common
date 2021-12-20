@@ -83,8 +83,8 @@ ODM_MANIFEST_SKUS += nfc
 ODM_MANIFEST_NFC_FILES := $(COMMON_PATH)/manifest_nfc.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB ?= //$(COMMON_PATH):init_realme_kona
-TARGET_RECOVERY_DEVICE_MODULES ?= init_realme_kona
+TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_kona
+TARGET_RECOVERY_DEVICE_MODULES := libinit_kona
 
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := Image
