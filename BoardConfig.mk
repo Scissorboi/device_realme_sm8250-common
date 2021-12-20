@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/realme/realme_kona
+DEVICE_PATH := device/realme/kona
 BOARD_VENDOR := realme
 BUILD_BROKEN_DUP_RULES := true
 
@@ -94,8 +94,8 @@ ODM_MANIFEST_SKUS += RMX2076PU
 ODM_MANIFEST_RMX2076PU_FILES := $(DEVICE_PATH)/odm_manifests/manifest_RMX2076PU.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_kona
-TARGET_RECOVERY_DEVICE_MODULES := libinit_kona
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_realme_kona
+TARGET_RECOVERY_DEVICE_MODULES := libinit_realme_kona
 
 # LMKD
 TARGET_LMKD_STATS_LOG := true
