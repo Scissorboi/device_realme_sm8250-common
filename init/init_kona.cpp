@@ -193,7 +193,7 @@ void vendor_load_properties()
     } else if (model.find("RMX2072CN") && region.find("Realme x50 Pro") != std::string::npos) {
         load_RMX2072CN();
     } else if (model.find("RMX2076PU") && region.find("Realme x50 Pro") != std::string::npos) {
-        load_RMX2072PU();
+        load_RMX2076PU();
     } else {
         LOG(ERROR) << __func__ << ": unexcepted device!";
     }

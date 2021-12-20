@@ -6,7 +6,9 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter alioth RMX2076 cas cmi lmi thyme umi,$(TARGET_DEVICE)),)
+ifneq ($(filter RMX2076 RMX2076PU RMX2071CN,$(TARGET_DEVICE)),)
+
+$(call add-radio-file,releasetools/dynamic-remove-oplus)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
