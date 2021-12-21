@@ -26,9 +26,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 #$(call inherit-product, vendor/realme/sm8250-common/sm8250-common-vendor.mk)
 
 PRODUCT_SHIPPING_API_LEVEL := 29
-
-PRODUCT_TARGET_VNDK_VERSION := 29
-PRODUCT_EXTRA_VNDK_VERSIONS := 29
+PRODUCT_TARGET_VNDK_VERSION := 30
 
 # FIXME: master: compat for libprotobuf
 # See https://android-review.googlesource.com/c/platform/prebuilts/vndk/v28/+/1109518
@@ -106,6 +104,10 @@ PRODUCT_PACKAGES += \
     NfcNci \
     SecureElement \
     Tag
+
+# Overlays - override vendor ones
+PRODUCT_PACKAGES += \
+    FrameworksResTarget
 
 # OTA
 PRODUCT_HOST_PACKAGES += \

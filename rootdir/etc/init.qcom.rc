@@ -313,8 +313,6 @@ on property:sys.boot_completed=1
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
-    mount none /vendor/etc/audio/audio_policy_configuration.xml /vendor/etc/audio_policy_configuration.xml bind
-    mount none dev/null /vendor/overlay/FrameworksResTarget.apk bind
     mount none dev/null /vendor/lib/soundfx/libvolumelistener.so bind
     mount none dev/null /vendor/lib64/soundfx/libvolumelistener.so bind
 
