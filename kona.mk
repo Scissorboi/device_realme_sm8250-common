@@ -23,7 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/realme/sm8250-common/sm8250-common-vendor.mk)
+#$(call inherit-product, vendor/realme/sm8250-common/sm8250-common-vendor.mk)
 
 
 # VNDK
@@ -163,8 +163,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libnl
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+#PRODUCT_BOOT_JARS += \
+#    WfdCommon
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-wfd.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-wfd.xml

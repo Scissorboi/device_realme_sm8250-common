@@ -152,6 +152,7 @@ BOARD_USES_SYSTEM_EXTIMAGE := true
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_VENDOR := vendor
+BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
@@ -200,4 +201,4 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 
 # Inherit from the proprietary version
--include vendor/realme/sm8250-common/BoardConfigVendor.mk
+#-include vendor/realme/sm8250-common/BoardConfigVendor.mk
